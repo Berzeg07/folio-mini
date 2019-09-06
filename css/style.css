@@ -1,0 +1,651 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "MyriadPro-Regular";
+  src: url("../fonts/MyriadPro-Regular/MyriadPro-Regular.eot");
+  src: local("☺"), url("../fonts/MyriadPro-Regular/MyriadPro-Regular.woff") format("woff"), url("../fonts/MyriadPro-Regular/MyriadPro-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DINPro-Bold";
+  src: url("../fonts/DINPro-Bold/DINPro-Bold.eot");
+  src: local("☺"), url("../fonts/DINPro-Bold/DINPro-Bold.woff") format("woff"), url("../fonts/DINPro-Bold/DINPro-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DINPro-Regular";
+  src: url("../fonts/DINPro-Regular/DINPro-Regular.eot");
+  src: local("☺"), url("../fonts/DINPro-Regular/DINPro-Regular.woff") format("woff"), url("../fonts/DINPro-Regular/DINPro-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h2,
+h3,
+h3,
+h4,
+h4,
+h5,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+button {
+  outline: none;
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: '';
+  content: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+a,
+input,
+textarea {
+  outline: none;
+}
+
+.btn-main {
+  font-family: "DINPro-Bold";
+  font-size: 18px;
+  border: 3px solid white;
+  color: white;
+  background: transparent;
+  text-align: center;
+  padding: 15px 0;
+  text-transform: uppercase;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.btn-main:hover {
+  background: white;
+  color: #0C1A2A;
+}
+
+.more-btn {
+  border: 3px solid #01254B;
+  color: #334157;
+  width: 362px;
+  margin: 25px 0;
+}
+
+@media (min-width: 1110px) {
+  .more-btn {
+    margin: 80px 0 106px;
+  }
+}
+
+.more-btn:hover {
+  background: #01254B;
+  color: white;
+}
+
+.main-title {
+  font-family: "DINPro-Regular";
+  color: #334157;
+  font-size: 22px;
+  text-transform: uppercase;
+  margin: 44px 0 40px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .main-title {
+    font-size: 48px;
+    margin: 64px 0 60px;
+  }
+}
+
+.article {
+  font-family: "MyriadPro-Regular";
+  font-size: 18px;
+  text-align: center;
+  color: #09162C;
+  margin-bottom: 25px;
+}
+
+@media (min-width: 768px) {
+  .article {
+    margin-bottom: 55px;
+  }
+}
+
+@media (min-width: 1110px) {
+  .article {
+    margin-bottom: 144px;
+  }
+}
+
+.article p:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.portfolio {
+  max-width: 1650px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.portfolio-item {
+  position: relative;
+  transition: 0.5s;
+  z-index: 60;
+}
+
+.portfolio-item img {
+  display: block;
+}
+
+.portfolio-item:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 308px;
+  background: url("../img/shadow.png") no-repeat center;
+  z-index: 10;
+}
+
+.portfolio-item:hover .portfolio-hidden {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (min-width: 1270px) {
+  .portfolio-item:hover {
+    transform: scale(1.1);
+    z-index: 100;
+  }
+}
+
+.portfolio-title {
+  font-family: "DINPro-Bold";
+  color: white;
+  text-transform: uppercase;
+  font-size: 18px;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 45px;
+  z-index: 20;
+}
+
+.portfolio-hidden {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 28px;
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  z-index: 70;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+@media (min-width: 768px) {
+  .portfolio-hidden {
+    padding-bottom: 10px;
+  }
+}
+
+@media (min-width: 1110px) {
+  .portfolio-hidden {
+    padding-bottom: 28px;
+  }
+}
+
+.portfolio-about, .portfolio-article {
+  font-family: "DINPro-Bold";
+  color: white;
+}
+
+.portfolio-article {
+  text-align: center;
+  padding-bottom: 30px;
+  margin-bottom: 25px;
+  position: relative;
+  margin-top: auto;
+  font-size: 14px;
+}
+
+@media (min-width: 500px) {
+  .portfolio-article {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) {
+  .portfolio-article {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1110px) {
+  .portfolio-article {
+    font-size: 18px;
+  }
+}
+
+.portfolio-article:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 60px;
+  height: 2px;
+  background: white;
+}
+
+.portfolio-about {
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+@media (min-width: 500px) {
+  .portfolio-about {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 768px) {
+  .portfolio-about {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1270px) {
+  .portfolio-about {
+    font-size: 22px;
+  }
+}
+
+.portfolio-btn {
+  padding: 10px 25px;
+  margin-bottom: 25px;
+  font-size: 12px;
+}
+
+@media (min-width: 500px) {
+  .portfolio-btn {
+    padding: 10px 35px;
+    margin-bottom: 60px;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) {
+  .portfolio-btn {
+    margin-bottom: 20px;
+    font-size: 14px;
+    padding: 6px 30px;
+  }
+}
+
+@media (min-width: 1110px) {
+  .portfolio-btn {
+    padding: 10px 35px;
+    margin-bottom: 60px;
+    font-size: 18px;
+  }
+}
+
+.footer {
+  background: #0C1A2A;
+  padding: 34px 15px 97px;
+}
+
+.footer-inner {
+  max-width: 1224px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+  .contacts {
+    padding-top: 60px;
+  }
+}
+
+.contacts-title {
+  font-family: "DINPro-Bold";
+  color: white;
+  text-transform: uppercase;
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+
+@media (min-width: 768px) {
+  .contacts-title {
+    font-size: 45px;
+    margin-bottom: 73px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .contacts-title {
+    text-align: left;
+  }
+}
+
+.contacts-article {
+  font-family: "MyriadPro-Regular";
+  font-size: 18px;
+  color: white;
+  margin-bottom: 25px;
+}
+
+@media (min-width: 768px) {
+  .contacts-article {
+    text-align: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .contacts-article {
+    text-align: left;
+  }
+}
+
+.contacts-item {
+  padding-top: 20px;
+}
+
+@media (min-width: 600px) {
+  .contacts-item {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .contacts-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 1210px) {
+  .contacts-item {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.contacts-phone {
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.contacts-phone a {
+  font-family: "MyriadPro-Regular";
+  color: white;
+  font-size: 30px;
+}
+
+@media (min-width: 600px) {
+  .contacts-phone {
+    padding-right: 50px;
+    margin-right: 34px;
+  }
+  .contacts-phone:after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    right: 0;
+    top: 0;
+    height: 106px;
+    background: #0658A5;
+  }
+}
+
+@media (min-width: 768px) {
+  .contacts-phone {
+    padding-right: 70px;
+  }
+}
+
+.contacts-email li {
+  margin-bottom: 25px;
+}
+
+.contacts-email a {
+  font-family: "MyriadPro-Regular";
+  font-size: 18px;
+  color: #3F95E1;
+}
+
+.form {
+  border: 5px solid #233347;
+  padding: 15px;
+}
+
+@media (min-width: 992px) {
+  .form {
+    padding: 38px 40px 30px;
+  }
+}
+
+.form-inp {
+  margin-bottom: 18px;
+}
+
+.form-inp input,
+.form-inp textarea {
+  font-family: "DINPro-Regular";
+  font-size: 18px;
+  width: 100%;
+  color: white;
+  padding-left: 15px;
+  background: #233347;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .form-inp input,
+  .form-inp textarea {
+    padding-left: 35px;
+  }
+}
+
+.form-inp input {
+  height: 55px;
+  margin-bottom: 3px;
+}
+
+.form-inp textarea {
+  resize: none;
+  height: 112px;
+  padding-top: 23px;
+}
+
+.form-privacy {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.form-privacy a {
+  font-family: "DINPro-Regular";
+  font-size: 14px;
+  text-decoration: underline;
+  color: #4D89C0;
+}
+
+.form-btn {
+  width: 220px;
+  margin: 0 auto;
+  display: inherit;
+}
+
+@media (min-width: 992px) {
+  .form-btn {
+    width: 290px;
+  }
+}
+
+.modal-title {
+  font-family: "DINPro-Bold";
+  font-size: 20px;
+  color: #334157;
+  text-transform: uppercase;
+}
+
+.modal-article {
+  padding-top: 20px;
+}
+
+.modal-article p {
+  font-family: "DINPro-Regular";
+  margin-bottom: 15px;
+}
